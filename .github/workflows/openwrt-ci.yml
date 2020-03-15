@@ -6,6 +6,8 @@
 # 
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
+# 16/03/2020
+#
 
 name: OpenWrt-CI
 
@@ -172,13 +174,13 @@ jobs:
           CONFIG_OPENVPN_openssl_ENABLE_SMALL=y
           CONFIG_PACKAGE_6in4=y
           # CONFIG_PACKAGE_UnblockNeteaseMusic is not set
+          CONFIG_PACKAGE_acme=y
           CONFIG_PACKAGE_amule=y
           CONFIG_PACKAGE_aria2=y
           CONFIG_PACKAGE_ariang=y
           CONFIG_PACKAGE_attr=y
           CONFIG_PACKAGE_avahi-dbus-daemon=y
           CONFIG_PACKAGE_baidupcs-web=y
-          CONFIG_PACKAGE_bash=y
           CONFIG_PACKAGE_boost-chrono=y
           CONFIG_PACKAGE_boost-random=y
           CONFIG_PACKAGE_brcmfmac-firmware-43455-sdio=y
@@ -187,7 +189,6 @@ jobs:
           CONFIG_PACKAGE_ca-bundle=y
           CONFIG_PACKAGE_cgroupfs-mount=y
           CONFIG_PACKAGE_containerd=y
-          CONFIG_PACKAGE_coreutils-nohup=y
           CONFIG_PACKAGE_curl=y
           # CONFIG_PACKAGE_cypress-firmware-43455-sdio is not set
           # CONFIG_PACKAGE_cypress-nvram-43455-sdio-rpi-4b is not set
@@ -276,9 +277,11 @@ jobs:
           CONFIG_PACKAGE_libwxbase=y
           CONFIG_PACKAGE_libxml2=y
           CONFIG_PACKAGE_libzstd=y
+          CONFIG_PACKAGE_luci-app-acme=y
           CONFIG_PACKAGE_luci-app-amule=y
           CONFIG_PACKAGE_luci-app-aria2=y
           CONFIG_PACKAGE_luci-app-baidupcs-web=m
+          CONFIG_PACKAGE_luci-app-commands=y
           CONFIG_PACKAGE_luci-app-dnscrypt-proxy=m
           CONFIG_PACKAGE_luci-app-dnsforwarder=m
           CONFIG_PACKAGE_luci-app-dockerman=y
@@ -295,7 +298,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-netdata=y
           CONFIG_PACKAGE_luci-app-nft-qos=y
           CONFIG_PACKAGE_luci-app-nps=y
-          CONFIG_PACKAGE_luci-app-openclash=y
+          CONFIG_PACKAGE_luci-app-ntpc=y
           CONFIG_PACKAGE_luci-app-openvpn=y
           CONFIG_PACKAGE_luci-app-openvpn-server=y
           CONFIG_PACKAGE_luci-app-qbittorrent=y
@@ -309,11 +312,11 @@ jobs:
           CONFIG_PACKAGE_luci-app-ttyd=y
           CONFIG_PACKAGE_luci-app-usb-printer=y
           CONFIG_PACKAGE_luci-app-v2ray-server=y
-          CONFIG_PACKAGE_luci-app-verysync=m
-          CONFIG_PACKAGE_luci-app-watchcat=y
           CONFIG_PACKAGE_luci-app-wifischedule=y
+          CONFIG_PACKAGE_luci-app-wrtbwmon=y
           CONFIG_PACKAGE_luci-i18n-amule-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-aria2-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-commands-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-dnsforwarder-zh-cn=m
           CONFIG_PACKAGE_luci-i18n-dockerman-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-frps-zh-cn=y
@@ -327,6 +330,7 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-netdata-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-nft-qos-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-nps-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-ntpc-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-openvpn-server-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-openvpn-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-qbittorrent-zh-cn=y
@@ -338,14 +342,14 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-usb-printer-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-v2ray-server-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-verysync-zh-cn=m
-          CONFIG_PACKAGE_luci-i18n-watchcat-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-wifischedule-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-wrtbwmon-zh-cn=y
           CONFIG_PACKAGE_luci-lib-docker=y
           CONFIG_PACKAGE_luci-lib-httpprotoutils=m
           CONFIG_PACKAGE_luci-lib-json=y
           CONFIG_PACKAGE_luci-proto-ipv6=y
           CONFIG_PACKAGE_luci-theme-argon=y
+          CONFIG_PACKAGE_luci-theme-material=y
           CONFIG_PACKAGE_luci-theme-netgear=y
           CONFIG_PACKAGE_lxc=y
           CONFIG_PACKAGE_lxc-attach=y
@@ -364,6 +368,7 @@ jobs:
           CONFIG_PACKAGE_nginx=y
           # CONFIG_PACKAGE_node is not set
           CONFIG_PACKAGE_npc=y
+          CONFIG_PACKAGE_ntpclient=y
           CONFIG_PACKAGE_odhcp6c=y
           CONFIG_PACKAGE_odhcp6c_ext_cer_id=0
           CONFIG_PACKAGE_odhcpd-ipv6only=y
@@ -410,6 +415,7 @@ jobs:
           CONFIG_PACKAGE_runc=y
           CONFIG_PACKAGE_samba4-libs=y
           CONFIG_PACKAGE_samba4-server=y
+          CONFIG_PACKAGE_socat=y
           CONFIG_PACKAGE_softethervpn5-bridge=y
           CONFIG_PACKAGE_softethervpn5-client=y
           CONFIG_PACKAGE_softethervpn5-libs=y
@@ -420,8 +426,6 @@ jobs:
           CONFIG_PACKAGE_transmission-web-control=y
           CONFIG_PACKAGE_travelmate=y
           CONFIG_PACKAGE_ttyd=y
-          CONFIG_PACKAGE_verysync=m
-          CONFIG_PACKAGE_watchcat=y
           CONFIG_PACKAGE_wifischedule=y
           CONFIG_PACKAGE_wsdd2=y
           CONFIG_PACKAGE_zoneinfo-asia=y
@@ -436,6 +440,7 @@ jobs:
           CONFIG_TARGET_EXT4_RESERVED_PCT=0
           CONFIG_TARGET_ROOTFS_EXT4FS=y
           CONFIG_TARGET_ROOTFS_PARTSIZE=512
+          CONFIG_TARGET_ROOTFS_TARGZ=y
           # CONFIG_UnblockNeteaseMusic_NodeJS is not set
           EOF
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
