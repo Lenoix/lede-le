@@ -320,13 +320,18 @@ jobs:
           CONFIG_PACKAGE_luci-app-ttyd=y
           CONFIG_PACKAGE_luci-app-usb-printer=y
           CONFIG_PACKAGE_luci-app-v2ray-server=y
+          CONFIG_PACKAGE_luci-app-verysync=m
+          CONFIG_PACKAGE_luci-app-watchcat=y
           CONFIG_PACKAGE_luci-app-wifischedule=y
           CONFIG_PACKAGE_luci-app-wrtbwmon=y
           CONFIG_PACKAGE_luci-i18n-amule-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-aria2-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-commands-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-aria2-zh-tw=y
           CONFIG_PACKAGE_luci-i18n-base-en=y
           CONFIG_PACKAGE_luci-i18n-base-zh-tw=y
+          CONFIG_PACKAGE_luci-i18n-commands-en=y
+          CONFIG_PACKAGE_luci-i18n-commands-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-commands-zh-tw=y
           CONFIG_PACKAGE_luci-i18n-ddns-zh-tw=y
           CONFIG_PACKAGE_luci-i18n-dnsforwarder-zh-cn=m
           CONFIG_PACKAGE_luci-i18n-dockerman-zh-cn=y
@@ -347,7 +352,9 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-nft-qos-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-nft-qos-zh-tw=y
           CONFIG_PACKAGE_luci-i18n-nps-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-ntpc-en=y
           CONFIG_PACKAGE_luci-i18n-ntpc-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-ntpc-zh-tw=y
           CONFIG_PACKAGE_luci-i18n-openvpn-en=y
           CONFIG_PACKAGE_luci-i18n-openvpn-server-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-openvpn-zh-cn=y
@@ -369,10 +376,14 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-upnp-zh-tw=y
           CONFIG_PACKAGE_luci-i18n-usb-printer-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-v2ray-server-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-verysync-zh-cn=m
+          CONFIG_PACKAGE_luci-i18n-watchcat-en=y
+          CONFIG_PACKAGE_luci-i18n-watchcat-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-watchcat-zh-tw=y
           CONFIG_PACKAGE_luci-i18n-wifischedule-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-wrtbwmon-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-wol-en=y
           CONFIG_PACKAGE_luci-i18n-wol-zh-tw=y
+          CONFIG_PACKAGE_luci-i18n-wrtbwmon-zh-cn=y
           CONFIG_PACKAGE_luci-lib-docker=y
           CONFIG_PACKAGE_luci-lib-httpprotoutils=m
           CONFIG_PACKAGE_luci-lib-json=y
@@ -457,9 +468,11 @@ jobs:
           CONFIG_PACKAGE_travelmate=y
           CONFIG_PACKAGE_tree=y
           CONFIG_PACKAGE_ttyd=y
-          CONFIG_PACKAGE_wifischedule=y
           CONFIG_PACKAGE_uuidd=y
+          CONFIG_PACKAGE_verysync=m
           CONFIG_PACKAGE_vim-full=y
+          CONFIG_PACKAGE_watchcat=y
+          CONFIG_PACKAGE_wifischedule=y
           CONFIG_PACKAGE_wsdd2=y
           CONFIG_PACKAGE_zoneinfo-asia=y
           CONFIG_PHP7_LIBFREETYPE=y
@@ -474,6 +487,7 @@ jobs:
           CONFIG_TARGET_ROOTFS_EXT4FS=y
           CONFIG_TARGET_ROOTFS_PARTSIZE=512
           CONFIG_TARGET_ROOTFS_TARGZ=y
+          # CONFIG_UnblockNeteaseMusic_NodeJS is not set
           # CONFIG_UnblockNeteaseMusic_NodeJS is not set
           EOF
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
