@@ -10,7 +10,7 @@
 name: OpenWrt-CI
 
 on:
-#  push:
+  push:
 #    branches:
 #      -master
 #  schedule:
@@ -86,9 +86,9 @@ jobs:
           # 无论你想要对固件进行怎样的定制, 都需要且只需要修改 EOF 回环内的内容.
           # 
           cat >> .config <<EOF
-          CONFIG_TARGET_armvirt=y
-          CONFIG_TARGET_armvirt_64=y
-          CONFIG_TARGET_armvirt_64_Default=y
+          CONFIG_TARGET_bcm27xx=y
+          CONFIG_TARGET_bcm27xx_bcm2711=y
+          CONFIG_TARGET_bcm27xx_bcm2711_DEVICE_rpi-4=y
           CONFIG_ARIA2_BITTORRENT=y
           CONFIG_ARIA2_NOXML=y
           CONFIG_ARIA2_OPENSSL=y
@@ -103,8 +103,9 @@ jobs:
           CONFIG_GNUTLS_HEARTBEAT=y
           CONFIG_GNUTLS_OCSP=y
           CONFIG_GNUTLS_PSK=y
+          CONFIG_IPTABLES_CONNLABEL=y
+          CONFIG_IPTABLES_NFTABLES=y
           CONFIG_KERNEL_ARM_PMU=y
-          CONFIG_KERNEL_BLK_DEV_THROTTLING=y
           CONFIG_KERNEL_CFQ_GROUP_IOSCHED=y
           CONFIG_KERNEL_CFS_BANDWIDTH=y
           CONFIG_KERNEL_CGROUP_PERF=y
@@ -172,16 +173,16 @@ jobs:
           CONFIG_OPENVPN_openssl_ENABLE_SMALL=y
           CONFIG_PACKAGE_6in4=y
           CONFIG_PACKAGE_acme=y
+          CONFIG_PACKAGE_adb=y
           CONFIG_PACKAGE_amule=y
           CONFIG_PACKAGE_aria2=y
           CONFIG_PACKAGE_ariang=y
           CONFIG_PACKAGE_attr=y
           CONFIG_PACKAGE_avahi-dbus-daemon=y
-          CONFIG_PACKAGE_baidupcs-web=m
           CONFIG_PACKAGE_bash=y
           CONFIG_PACKAGE_blkid=y
-          CONFIG_PACKAGE_boost-chrono=m
-          CONFIG_PACKAGE_boost-random=m
+          CONFIG_PACKAGE_boost-chrono=y
+          CONFIG_PACKAGE_boost-random=y
           CONFIG_PACKAGE_brcmfmac-firmware-43455-sdio=y
           CONFIG_PACKAGE_brcmfmac-firmware-43455-sdio-rpi-4b=y
           CONFIG_PACKAGE_btrfs-progs=y
@@ -196,15 +197,21 @@ jobs:
           CONFIG_PACKAGE_collectd-mod-network=y
           CONFIG_PACKAGE_collectd-mod-rrdtool=y
           CONFIG_PACKAGE_containerd=y
-          CONFIG_PACKAGE_coreutils-nohup=y
           CONFIG_PACKAGE_curl=y
+          # CONFIG_PACKAGE_cypress-firmware-43455-sdio is not set
+          # CONFIG_PACKAGE_cypress-nvram-43455-sdio-rpi-4b is not set
           CONFIG_PACKAGE_dbus=y
           CONFIG_PACKAGE_dnsmasq_full_conntrack=y
           CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
           CONFIG_PACKAGE_docker-ce=y
           CONFIG_PACKAGE_dynapoint=y
-          CONFIG_PACKAGE_e2fsprogs=y
+          CONFIG_PACKAGE_e2guardian=y
+          CONFIG_PACKAGE_extract=y
           CONFIG_PACKAGE_fdisk=y
+          CONFIG_PACKAGE_file=y
+          CONFIG_PACKAGE_findutils-find=y
+          CONFIG_PACKAGE_findutils-locate=y
+          CONFIG_PACKAGE_findutils-xargs=y
           CONFIG_PACKAGE_flock=y
           CONFIG_PACKAGE_frpc=y
           CONFIG_PACKAGE_frps=y
@@ -212,13 +219,13 @@ jobs:
           CONFIG_PACKAGE_gzip=y
           CONFIG_PACKAGE_haproxy=y
           CONFIG_PACKAGE_hd-idle=y
-          CONFIG_PACKAGE_icu=m
+          CONFIG_PACKAGE_icu=y
           CONFIG_PACKAGE_ip6tables=y
           CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
+          CONFIG_PACKAGE_iptables-mod-conntrack-label=y
           CONFIG_PACKAGE_iptables-mod-extra=y
           CONFIG_PACKAGE_iptables-mod-ipopt=y
           CONFIG_PACKAGE_ipv6helper=y
-          CONFIG_PACKAGE_iwinfo=y
           CONFIG_PACKAGE_kcptun-client=y
           CONFIG_PACKAGE_kmod-br-netfilter=y
           CONFIG_PACKAGE_kmod-crypto-cbc=y
@@ -240,6 +247,7 @@ jobs:
           CONFIG_PACKAGE_kmod-ifb=y
           CONFIG_PACKAGE_kmod-ikconfig=y
           CONFIG_PACKAGE_kmod-ipt-conntrack-extra=y
+          CONFIG_PACKAGE_kmod-ipt-conntrack-label=y
           CONFIG_PACKAGE_kmod-ipt-extra=y
           CONFIG_PACKAGE_kmod-ipt-ipopt=y
           CONFIG_PACKAGE_kmod-ipt-nat6=y
@@ -260,34 +268,31 @@ jobs:
           CONFIG_PACKAGE_kmod-nft-nat=y
           CONFIG_PACKAGE_kmod-nft-netdev=y
           CONFIG_PACKAGE_kmod-nft-offload=y
-          CONFIG_PACKAGE_kmod-nls-base=y
           CONFIG_PACKAGE_kmod-sched-connmark=y
           CONFIG_PACKAGE_kmod-sched-core=y
           CONFIG_PACKAGE_kmod-sit=y
           CONFIG_PACKAGE_kmod-tun=y
-          CONFIG_PACKAGE_kmod-usb-core=y
           CONFIG_PACKAGE_kmod-usb-printer=y
           CONFIG_PACKAGE_kmod-veth=y
+          CONFIG_PACKAGE_libaio=y
           CONFIG_PACKAGE_libattr=y
           CONFIG_PACKAGE_libavahi-client=y
           CONFIG_PACKAGE_libavahi-dbus-support=y
           CONFIG_PACKAGE_libbfd=y
-          CONFIG_PACKAGE_libblkid=y
           CONFIG_PACKAGE_libbz2=y
           CONFIG_PACKAGE_libcap=y
-          CONFIG_PACKAGE_libcomerr=y
           CONFIG_PACKAGE_libcurl=y
           CONFIG_PACKAGE_libdaemon=y
-          CONFIG_PACKAGE_libdb47=m
+          CONFIG_PACKAGE_libdb47=y
           CONFIG_PACKAGE_libdbus=y
           CONFIG_PACKAGE_libdevmapper=y
-          CONFIG_PACKAGE_libdouble-conversion=m
+          CONFIG_PACKAGE_libdouble-conversion=y
           CONFIG_PACKAGE_libexpat=y
-          CONFIG_PACKAGE_libext2fs=y
+          CONFIG_PACKAGE_libextractor=y
           CONFIG_PACKAGE_libfdisk=y
-          CONFIG_PACKAGE_libffi=m
+          CONFIG_PACKAGE_libffi=y
           CONFIG_PACKAGE_libfreetype=y
-          CONFIG_PACKAGE_libgdbm=m
+          CONFIG_PACKAGE_libgdbm=y
           CONFIG_PACKAGE_libgmp=y
           CONFIG_PACKAGE_libgnutls=y
           CONFIG_PACKAGE_libiconv-full=y
@@ -296,6 +301,7 @@ jobs:
           CONFIG_PACKAGE_libltdl=y
           CONFIG_PACKAGE_liblxc=y
           CONFIG_PACKAGE_liblzo=y
+          CONFIG_PACKAGE_libmagic=y
           CONFIG_PACKAGE_libminiupnpc=y
           CONFIG_PACKAGE_libmount=y
           CONFIG_PACKAGE_libnatpmp=y
@@ -306,15 +312,13 @@ jobs:
           CONFIG_PACKAGE_libnfnetlink=y
           CONFIG_PACKAGE_libnftnl=y
           CONFIG_PACKAGE_libpam=y
-          CONFIG_PACKAGE_libpcre2-16=m
+          CONFIG_PACKAGE_libpcre2-16=y
           CONFIG_PACKAGE_libpng=y
           CONFIG_PACKAGE_libpopt=y
           CONFIG_PACKAGE_libreadline=y
           CONFIG_PACKAGE_librrd1=y
           CONFIG_PACKAGE_libsensors=y
-          CONFIG_PACKAGE_libsmartcols=y
-          CONFIG_PACKAGE_libsqlite3=m
-          CONFIG_PACKAGE_libss=y
+          CONFIG_PACKAGE_libsqlite3=y
           CONFIG_PACKAGE_libsysfs=y
           CONFIG_PACKAGE_libtasn1=y
           CONFIG_PACKAGE_libtirpc=y
@@ -323,15 +327,17 @@ jobs:
           CONFIG_PACKAGE_libwebsockets-full=y
           CONFIG_PACKAGE_libwrap=y
           CONFIG_PACKAGE_libwxbase=y
-          CONFIG_PACKAGE_libxml2=m
-          CONFIG_PACKAGE_libzstd=m
+          CONFIG_PACKAGE_libxml2=y
+          CONFIG_PACKAGE_libzstd=y
           CONFIG_PACKAGE_lm-sensors=y
           CONFIG_PACKAGE_lm-sensors-detect=y
+          CONFIG_PACKAGE_losetup=y
           CONFIG_PACKAGE_lsblk=y
+          CONFIG_PACKAGE_lscpu=y
           CONFIG_PACKAGE_luci-app-acme=y
+          CONFIG_PACKAGE_luci-app-advanced-reboot=y
           CONFIG_PACKAGE_luci-app-amule=y
           CONFIG_PACKAGE_luci-app-aria2=y
-          CONFIG_PACKAGE_luci-app-baidupcs-web=m
           CONFIG_PACKAGE_luci-app-diskman=y
           CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs=y
           CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_linear=y
@@ -340,7 +346,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-diskman_INCLUDE_mdadm=y
           CONFIG_PACKAGE_luci-app-dockerman=y
           CONFIG_PACKAGE_luci-app-dynapoint=y
-          CONFIG_PACKAGE_luci-app-familycloud=y
+          CONFIG_PACKAGE_luci-app-e2guardian=y
           CONFIG_PACKAGE_luci-app-frpc=y
           CONFIG_PACKAGE_luci-app-frps=y
           CONFIG_PACKAGE_luci-app-guest-wifi=y
@@ -353,11 +359,9 @@ jobs:
           CONFIG_PACKAGE_luci-app-netdata=y
           CONFIG_PACKAGE_luci-app-nfs=y
           CONFIG_PACKAGE_luci-app-nft-qos=y
-          CONFIG_PACKAGE_luci-app-nps=y
-          CONFIG_PACKAGE_luci-app-ntpc=y
           CONFIG_PACKAGE_luci-app-openvpn=y
           CONFIG_PACKAGE_luci-app-openvpn-server=y
-          CONFIG_PACKAGE_luci-app-qbittorrent=m
+          CONFIG_PACKAGE_luci-app-qbittorrent=y
           CONFIG_PACKAGE_luci-app-qos=y
           CONFIG_PACKAGE_luci-app-samba4=y
           CONFIG_PACKAGE_luci-app-softethervpn=y
@@ -368,11 +372,11 @@ jobs:
           CONFIG_PACKAGE_luci-app-ttyd=y
           CONFIG_PACKAGE_luci-app-usb-printer=y
           CONFIG_PACKAGE_luci-app-v2ray-server=y
-          CONFIG_PACKAGE_luci-app-verysync=m
           CONFIG_PACKAGE_luci-app-watchcat=y
           CONFIG_PACKAGE_luci-app-wifischedule=y
           CONFIG_PACKAGE_luci-app-wrtbwmon=y
           CONFIG_PACKAGE_luci-app-zerotier=y
+          CONFIG_PACKAGE_luci-i18n-advanced-reboot-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-amule-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-aria2-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-dockerman-zh-cn=y
@@ -386,11 +390,9 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-netdata-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-nfs-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-nft-qos-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-nps-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-ntpc-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-openvpn-server-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-openvpn-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-qbittorrent-zh-cn=m
+          CONFIG_PACKAGE_luci-i18n-qbittorrent-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-qos-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-samba4-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-softethervpn-zh-cn=y
@@ -399,7 +401,6 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-usb-printer-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-v2ray-server-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-verysync-zh-cn=m
           CONFIG_PACKAGE_luci-i18n-watchcat-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-wifischedule-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-wrtbwmon-zh-cn=y
@@ -428,8 +429,6 @@ jobs:
           CONFIG_PACKAGE_nft-qos=y
           CONFIG_PACKAGE_nftables=y
           CONFIG_PACKAGE_nginx=y
-          CONFIG_PACKAGE_npc=y
-          CONFIG_PACKAGE_ntpclient=y
           CONFIG_PACKAGE_odhcp6c=y
           CONFIG_PACKAGE_odhcp6c_ext_cer_id=0
           CONFIG_PACKAGE_odhcpd-ipv6only=y
@@ -475,37 +474,40 @@ jobs:
           CONFIG_PACKAGE_php7-mod-opcache=y
           CONFIG_PACKAGE_php7-mod-session=y
           CONFIG_PACKAGE_php7-mod-zip=y
-          CONFIG_PACKAGE_python=m
-          CONFIG_PACKAGE_python-base=m
-          CONFIG_PACKAGE_python-codecs=m
-          CONFIG_PACKAGE_python-compiler=m
-          CONFIG_PACKAGE_python-ctypes=m
-          CONFIG_PACKAGE_python-db=m
-          CONFIG_PACKAGE_python-decimal=m
-          CONFIG_PACKAGE_python-distutils=m
-          CONFIG_PACKAGE_python-email=m
-          CONFIG_PACKAGE_python-gdbm=m
-          CONFIG_PACKAGE_python-light=m
-          CONFIG_PACKAGE_python-logging=m
-          CONFIG_PACKAGE_python-multiprocessing=m
-          CONFIG_PACKAGE_python-ncurses=m
-          CONFIG_PACKAGE_python-openssl=m
-          CONFIG_PACKAGE_python-pydoc=m
-          CONFIG_PACKAGE_python-sqlite3=m
-          CONFIG_PACKAGE_python-unittest=m
-          CONFIG_PACKAGE_python-xml=m
-          CONFIG_PACKAGE_qBittorrent=m
+          CONFIG_PACKAGE_python=y
+          CONFIG_PACKAGE_python-base=y
+          CONFIG_PACKAGE_python-codecs=y
+          CONFIG_PACKAGE_python-compiler=y
+          CONFIG_PACKAGE_python-ctypes=y
+          CONFIG_PACKAGE_python-db=y
+          CONFIG_PACKAGE_python-decimal=y
+          CONFIG_PACKAGE_python-distutils=y
+          CONFIG_PACKAGE_python-email=y
+          CONFIG_PACKAGE_python-gdbm=y
+          CONFIG_PACKAGE_python-light=y
+          CONFIG_PACKAGE_python-logging=y
+          CONFIG_PACKAGE_python-multiprocessing=y
+          CONFIG_PACKAGE_python-ncurses=y
+          CONFIG_PACKAGE_python-openssl=y
+          CONFIG_PACKAGE_python-pydoc=y
+          CONFIG_PACKAGE_python-sqlite3=y
+          CONFIG_PACKAGE_python-unittest=y
+          CONFIG_PACKAGE_python-xml=y
+          CONFIG_PACKAGE_qBittorrent=y
           CONFIG_PACKAGE_qos-scripts=y
-          CONFIG_PACKAGE_qt5-core=m
-          CONFIG_PACKAGE_qt5-network=m
-          CONFIG_PACKAGE_qt5-xml=m
-          CONFIG_PACKAGE_rblibtorrent=m
+          CONFIG_PACKAGE_qt5-core=y
+          CONFIG_PACKAGE_qt5-network=y
+          CONFIG_PACKAGE_qt5-xml=y
+          CONFIG_PACKAGE_rblibtorrent=y
           CONFIG_PACKAGE_rpcbind=y
           CONFIG_PACKAGE_rpcd-mod-lxc=y
           CONFIG_PACKAGE_rrdtool1=y
+          CONFIG_PACKAGE_rsync=y
+          CONFIG_PACKAGE_rsyncd=y
           CONFIG_PACKAGE_runc=y
           CONFIG_PACKAGE_samba4-libs=y
           CONFIG_PACKAGE_samba4-server=y
+          CONFIG_PACKAGE_screen=y
           CONFIG_PACKAGE_smartmontools=y
           CONFIG_PACKAGE_socat=y
           CONFIG_PACKAGE_softethervpn5-bridge=y
@@ -522,7 +524,6 @@ jobs:
           CONFIG_PACKAGE_ttyd=y
           CONFIG_PACKAGE_uclibcxx=y
           CONFIG_PACKAGE_unzip=y
-          CONFIG_PACKAGE_verysync=m
           CONFIG_PACKAGE_vim-fuller=y
           CONFIG_PACKAGE_watchcat=y
           CONFIG_PACKAGE_wifischedule=y
@@ -534,16 +535,20 @@ jobs:
           CONFIG_PHP7_LIBFREETYPE=y
           CONFIG_RPCBIND_LIBWRAP=y
           CONFIG_RPCBIND_RMTCALLS=y
+          CONFIG_RSYNC_zlib=y
           CONFIG_SAMBA4_SERVER_AVAHI=y
           CONFIG_SAMBA4_SERVER_NETBIOS=y
           CONFIG_SAMBA4_SERVER_VFS=y
+          CONFIG_SAMBA4_SERVER_VFSX=y
           CONFIG_SQLITE_FTS3=y
           CONFIG_SQLITE_RTREE=y
           CONFIG_TARGET_EXT4_BLOCKSIZE=4096
           CONFIG_TARGET_EXT4_BLOCKSIZE_4K=y
           CONFIG_TARGET_EXT4_RESERVED_PCT=0
+          CONFIG_TARGET_ROOTFS_CPIOGZ=y
           CONFIG_TARGET_ROOTFS_EXT4FS=y
           CONFIG_TARGET_ROOTFS_PARTSIZE=512
+          CONFIG_TARGET_ROOTFS_TARGZ=y
           EOF
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
           # cat >> .config <<EOF
