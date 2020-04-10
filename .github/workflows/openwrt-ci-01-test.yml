@@ -10,7 +10,7 @@
 name: OpenWrt-CI
 
 on:
-#  push:
+  push:
 #    branches:
 #      -master
 #  schedule:
@@ -180,8 +180,8 @@ jobs:
           CONFIG_PACKAGE_baidupcs-web=m
           CONFIG_PACKAGE_bash=y
           CONFIG_PACKAGE_blkid=y
-          CONFIG_PACKAGE_boost-chrono=m
-          CONFIG_PACKAGE_boost-random=m
+          CONFIG_PACKAGE_boost-chrono=y
+          CONFIG_PACKAGE_boost-random=y
           CONFIG_PACKAGE_brcmfmac-firmware-43455-sdio=y
           CONFIG_PACKAGE_brcmfmac-firmware-43455-sdio-rpi-4b=y
           CONFIG_PACKAGE_btrfs-progs=y
@@ -212,7 +212,7 @@ jobs:
           CONFIG_PACKAGE_gzip=y
           CONFIG_PACKAGE_haproxy=y
           CONFIG_PACKAGE_hd-idle=y
-          CONFIG_PACKAGE_icu=m
+          CONFIG_PACKAGE_icu=y
           CONFIG_PACKAGE_ip6tables=y
           CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
           CONFIG_PACKAGE_iptables-mod-extra=y
@@ -278,16 +278,16 @@ jobs:
           CONFIG_PACKAGE_libcomerr=y
           CONFIG_PACKAGE_libcurl=y
           CONFIG_PACKAGE_libdaemon=y
-          CONFIG_PACKAGE_libdb47=m
+          CONFIG_PACKAGE_libdb47=y
           CONFIG_PACKAGE_libdbus=y
           CONFIG_PACKAGE_libdevmapper=y
-          CONFIG_PACKAGE_libdouble-conversion=m
+          CONFIG_PACKAGE_libdouble-conversion=y
           CONFIG_PACKAGE_libexpat=y
           CONFIG_PACKAGE_libext2fs=y
           CONFIG_PACKAGE_libfdisk=y
-          CONFIG_PACKAGE_libffi=m
+          CONFIG_PACKAGE_libffi=y
           CONFIG_PACKAGE_libfreetype=y
-          CONFIG_PACKAGE_libgdbm=m
+          CONFIG_PACKAGE_libgdbm=y
           CONFIG_PACKAGE_libgmp=y
           CONFIG_PACKAGE_libgnutls=y
           CONFIG_PACKAGE_libiconv-full=y
@@ -306,14 +306,14 @@ jobs:
           CONFIG_PACKAGE_libnfnetlink=y
           CONFIG_PACKAGE_libnftnl=y
           CONFIG_PACKAGE_libpam=y
-          CONFIG_PACKAGE_libpcre2-16=m
+          CONFIG_PACKAGE_libpcre2-16=y
           CONFIG_PACKAGE_libpng=y
           CONFIG_PACKAGE_libpopt=y
           CONFIG_PACKAGE_libreadline=y
           CONFIG_PACKAGE_librrd1=y
           CONFIG_PACKAGE_libsensors=y
           CONFIG_PACKAGE_libsmartcols=y
-          CONFIG_PACKAGE_libsqlite3=m
+          CONFIG_PACKAGE_libsqlite3=y
           CONFIG_PACKAGE_libss=y
           CONFIG_PACKAGE_libsysfs=y
           CONFIG_PACKAGE_libtasn1=y
@@ -323,8 +323,8 @@ jobs:
           CONFIG_PACKAGE_libwebsockets-full=y
           CONFIG_PACKAGE_libwrap=y
           CONFIG_PACKAGE_libwxbase=y
-          CONFIG_PACKAGE_libxml2=m
-          CONFIG_PACKAGE_libzstd=m
+          CONFIG_PACKAGE_libxml2=y
+          CONFIG_PACKAGE_libzstd=y
           CONFIG_PACKAGE_lm-sensors=y
           CONFIG_PACKAGE_lm-sensors-detect=y
           CONFIG_PACKAGE_lsblk=y
@@ -357,7 +357,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-ntpc=y
           CONFIG_PACKAGE_luci-app-openvpn=y
           CONFIG_PACKAGE_luci-app-openvpn-server=y
-          CONFIG_PACKAGE_luci-app-qbittorrent=m
+          CONFIG_PACKAGE_luci-app-qbittorrent=y
           CONFIG_PACKAGE_luci-app-qos=y
           CONFIG_PACKAGE_luci-app-samba4=y
           CONFIG_PACKAGE_luci-app-softethervpn=y
@@ -390,7 +390,7 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-ntpc-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-openvpn-server-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-openvpn-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-qbittorrent-zh-cn=m
+          CONFIG_PACKAGE_luci-i18n-qbittorrent-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-qos-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-samba4-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-softethervpn-zh-cn=y
@@ -475,31 +475,31 @@ jobs:
           CONFIG_PACKAGE_php7-mod-opcache=y
           CONFIG_PACKAGE_php7-mod-session=y
           CONFIG_PACKAGE_php7-mod-zip=y
-          CONFIG_PACKAGE_python=m
-          CONFIG_PACKAGE_python-base=m
-          CONFIG_PACKAGE_python-codecs=m
-          CONFIG_PACKAGE_python-compiler=m
-          CONFIG_PACKAGE_python-ctypes=m
-          CONFIG_PACKAGE_python-db=m
-          CONFIG_PACKAGE_python-decimal=m
-          CONFIG_PACKAGE_python-distutils=m
-          CONFIG_PACKAGE_python-email=m
-          CONFIG_PACKAGE_python-gdbm=m
-          CONFIG_PACKAGE_python-light=m
-          CONFIG_PACKAGE_python-logging=m
-          CONFIG_PACKAGE_python-multiprocessing=m
-          CONFIG_PACKAGE_python-ncurses=m
-          CONFIG_PACKAGE_python-openssl=m
-          CONFIG_PACKAGE_python-pydoc=m
-          CONFIG_PACKAGE_python-sqlite3=m
-          CONFIG_PACKAGE_python-unittest=m
-          CONFIG_PACKAGE_python-xml=m
-          CONFIG_PACKAGE_qBittorrent=m
+          CONFIG_PACKAGE_python=y
+          CONFIG_PACKAGE_python-base=y
+          CONFIG_PACKAGE_python-codecs=y
+          CONFIG_PACKAGE_python-compiler=y
+          CONFIG_PACKAGE_python-ctypes=y
+          CONFIG_PACKAGE_python-db=y
+          CONFIG_PACKAGE_python-decimal=y
+          CONFIG_PACKAGE_python-distutils=y
+          CONFIG_PACKAGE_python-email=y
+          CONFIG_PACKAGE_python-gdbm=y
+          CONFIG_PACKAGE_python-light=y
+          CONFIG_PACKAGE_python-logging=y
+          CONFIG_PACKAGE_python-multiprocessing=y
+          CONFIG_PACKAGE_python-ncurses=y
+          CONFIG_PACKAGE_python-openssl=y
+          CONFIG_PACKAGE_python-pydoc=y
+          CONFIG_PACKAGE_python-sqlite3=y
+          CONFIG_PACKAGE_python-unittest=y
+          CONFIG_PACKAGE_python-xml=y
+          CONFIG_PACKAGE_qBittorrent=y
           CONFIG_PACKAGE_qos-scripts=y
-          CONFIG_PACKAGE_qt5-core=m
-          CONFIG_PACKAGE_qt5-network=m
-          CONFIG_PACKAGE_qt5-xml=m
-          CONFIG_PACKAGE_rblibtorrent=m
+          CONFIG_PACKAGE_qt5-core=y
+          CONFIG_PACKAGE_qt5-network=y
+          CONFIG_PACKAGE_qt5-xml=y
+          CONFIG_PACKAGE_rblibtorrent=y
           CONFIG_PACKAGE_rpcbind=y
           CONFIG_PACKAGE_rpcd-mod-lxc=y
           CONFIG_PACKAGE_rrdtool1=y
