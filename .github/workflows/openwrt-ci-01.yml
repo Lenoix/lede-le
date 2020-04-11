@@ -366,7 +366,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-samba4=y
           CONFIG_PACKAGE_luci-app-softethervpn=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
-          CONFIG_PACKAGE_luci-app-transmission=y
+          CONFIG_PACKAGE_luci-app-statistics=y
           CONFIG_PACKAGE_luci-app-travelmate=y
           CONFIG_PACKAGE_luci-app-ttyd=y
           CONFIG_PACKAGE_luci-app-usb-printer=y
@@ -395,7 +395,7 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-qos-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-samba4-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-softethervpn-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-transmission-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-statistics-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-usb-printer-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-v2ray-server-zh-cn=y
