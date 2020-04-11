@@ -13,8 +13,8 @@ on:
   push:
 #    branches:
 #      -master
-  schedule:
-    - cron: 30 23 * * *
+#  schedule:
+#    - cron: 0 20 * * *
 
 jobs:
 
@@ -181,8 +181,6 @@ jobs:
           CONFIG_PACKAGE_TAR_GZIP=y
           CONFIG_PACKAGE_TAR_XZ=y
           CONFIG_PACKAGE_acme=y
-          CONFIG_PACKAGE_alsa-lib=y
-          CONFIG_PACKAGE_alsa-utils=y
           CONFIG_PACKAGE_amule=y
           CONFIG_PACKAGE_aria2=y
           CONFIG_PACKAGE_ariang=y
@@ -208,7 +206,6 @@ jobs:
           CONFIG_PACKAGE_collectd-mod-memory=y
           CONFIG_PACKAGE_collectd-mod-network=y
           CONFIG_PACKAGE_collectd-mod-rrdtool=y
-          CONFIG_PACKAGE_confuse=y
           CONFIG_PACKAGE_containerd=y
           CONFIG_PACKAGE_coreutils-nohup=y
           CONFIG_PACKAGE_curl=y
@@ -219,9 +216,8 @@ jobs:
           CONFIG_PACKAGE_dynapoint=y
           CONFIG_PACKAGE_e2fsprogs=y
           CONFIG_PACKAGE_fdisk=y
-          CONFIG_PACKAGE_fdk-aac=y
+          CONFIG_PACKAGE_file=y
           CONFIG_PACKAGE_flock=y
-          CONFIG_PACKAGE_forked-daapd=y
           CONFIG_PACKAGE_frpc=y
           CONFIG_PACKAGE_frps=y
           CONFIG_PACKAGE_getopt=y
@@ -259,7 +255,6 @@ jobs:
           CONFIG_PACKAGE_kmod-fs-nfsd=y
           CONFIG_PACKAGE_kmod-ifb=y
           CONFIG_PACKAGE_kmod-ikconfig=y
-          CONFIG_PACKAGE_kmod-input-core=y
           CONFIG_PACKAGE_kmod-ipt-conntrack-extra=y
           CONFIG_PACKAGE_kmod-ipt-extra=y
           CONFIG_PACKAGE_kmod-ipt-ipopt=y
@@ -286,13 +281,11 @@ jobs:
           CONFIG_PACKAGE_kmod-sched-connmark=y
           CONFIG_PACKAGE_kmod-sched-core=y
           CONFIG_PACKAGE_kmod-sit=y
-          CONFIG_PACKAGE_kmod-sound-core=y
           CONFIG_PACKAGE_kmod-tun=y
           CONFIG_PACKAGE_kmod-usb-core=y
           CONFIG_PACKAGE_kmod-usb-printer=y
           CONFIG_PACKAGE_kmod-veth=y
-          CONFIG_PACKAGE_lame-lib=y
-          CONFIG_PACKAGE_libantlr3c=y
+          CONFIG_PACKAGE_less=y
           CONFIG_PACKAGE_libattr=y
           CONFIG_PACKAGE_libavahi-client=y
           CONFIG_PACKAGE_libavahi-dbus-support=y
@@ -311,13 +304,10 @@ jobs:
           CONFIG_PACKAGE_libext2fs=y
           CONFIG_PACKAGE_libfdisk=y
           CONFIG_PACKAGE_libffi=y
-          CONFIG_PACKAGE_libffmpeg-full=y
           CONFIG_PACKAGE_libfreetype=y
-          CONFIG_PACKAGE_libgcrypt=y
           CONFIG_PACKAGE_libgdbm=y
           CONFIG_PACKAGE_libgmp=y
           CONFIG_PACKAGE_libgnutls=y
-          CONFIG_PACKAGE_libgpg-error=y
           CONFIG_PACKAGE_libiconv-full=y
           CONFIG_PACKAGE_libjpeg=y
           CONFIG_PACKAGE_libkeyutils=y
@@ -325,6 +315,7 @@ jobs:
           CONFIG_PACKAGE_liblxc=y
           CONFIG_PACKAGE_liblzma=y
           CONFIG_PACKAGE_liblzo=y
+          CONFIG_PACKAGE_libmagic=y
           CONFIG_PACKAGE_libminiupnpc=y
           CONFIG_PACKAGE_libmount=y
           CONFIG_PACKAGE_libnatpmp=y
@@ -334,13 +325,10 @@ jobs:
           CONFIG_PACKAGE_libnetwork=y
           CONFIG_PACKAGE_libnfnetlink=y
           CONFIG_PACKAGE_libnftnl=y
-          CONFIG_PACKAGE_libopus=y
           CONFIG_PACKAGE_libpam=y
           CONFIG_PACKAGE_libpcre2-16=y
-          CONFIG_PACKAGE_libplist=y
           CONFIG_PACKAGE_libpng=y
           CONFIG_PACKAGE_libpopt=y
-          CONFIG_PACKAGE_libprotobuf-c=y
           CONFIG_PACKAGE_libreadline=y
           CONFIG_PACKAGE_librrd1=y
           CONFIG_PACKAGE_libsensors=y
@@ -351,7 +339,6 @@ jobs:
           CONFIG_PACKAGE_libtasn1=y
           CONFIG_PACKAGE_libtirpc=y
           CONFIG_PACKAGE_libubox-lua=y
-          CONFIG_PACKAGE_libunistring=y
           CONFIG_PACKAGE_libupnp=y
           CONFIG_PACKAGE_libwebsockets-full=y
           CONFIG_PACKAGE_libwrap=y
@@ -367,7 +354,6 @@ jobs:
           CONFIG_PACKAGE_luci-app-advanced-reboot=y
           CONFIG_PACKAGE_luci-app-amule=y
           CONFIG_PACKAGE_luci-app-aria2=y
-          CONFIG_PACKAGE_luci-app-baidupcs-web=m
           CONFIG_PACKAGE_luci-app-diskman=y
           CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs=y
           CONFIG_PACKAGE_luci-app-diskman_INCLUDE_kmod_md_linear=y
@@ -383,7 +369,6 @@ jobs:
           CONFIG_PACKAGE_luci-app-hd-idle=y
           CONFIG_PACKAGE_luci-app-kodexplorer=y
           CONFIG_PACKAGE_luci-app-lxc=y
-          CONFIG_PACKAGE_luci-app-music-remote-center=y
           CONFIG_PACKAGE_luci-app-mwan3=y
           CONFIG_PACKAGE_luci-app-mwan3helper=y
           CONFIG_PACKAGE_luci-app-netdata=y
@@ -417,7 +402,6 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-haproxy-tcp-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-hd-idle-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-kodexplorer-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-music-remote-center-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-mwan3-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-mwan3helper-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-netdata-zh-cn=y
@@ -455,7 +439,6 @@ jobs:
           CONFIG_PACKAGE_mdadm=y
           CONFIG_PACKAGE_mount-utils=y
           CONFIG_PACKAGE_mwan3=y
-          CONFIG_PACKAGE_mxml=y
           CONFIG_PACKAGE_nano=y
           CONFIG_PACKAGE_netdata=y
           CONFIG_PACKAGE_nfs-kernel-server=y
@@ -540,6 +523,8 @@ jobs:
           CONFIG_PACKAGE_rpcbind=y
           CONFIG_PACKAGE_rpcd-mod-lxc=y
           CONFIG_PACKAGE_rrdtool1=y
+          CONFIG_PACKAGE_rsync=y
+          CONFIG_PACKAGE_rsyncd=y
           CONFIG_PACKAGE_runc=y
           CONFIG_PACKAGE_samba4-libs=y
           CONFIG_PACKAGE_samba4-server=y
@@ -549,7 +534,6 @@ jobs:
           CONFIG_PACKAGE_softethervpn5-client=y
           CONFIG_PACKAGE_softethervpn5-libs=y
           CONFIG_PACKAGE_softethervpn5-server=y
-          CONFIG_PACKAGE_sqlite3-cli=y
           CONFIG_PACKAGE_sysfsutils=y
           CONFIG_PACKAGE_tar=y
           CONFIG_PACKAGE_tc=y
@@ -577,6 +561,7 @@ jobs:
           CONFIG_PHP7_LIBFREETYPE=y
           CONFIG_RPCBIND_LIBWRAP=y
           CONFIG_RPCBIND_RMTCALLS=y
+          CONFIG_RSYNC_zlib=y
           CONFIG_SAMBA4_SERVER_AVAHI=y
           CONFIG_SAMBA4_SERVER_NETBIOS=y
           CONFIG_SAMBA4_SERVER_VFS=y
