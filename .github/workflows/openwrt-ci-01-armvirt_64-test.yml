@@ -191,8 +191,6 @@ jobs:
           CONFIG_PACKAGE_blkid=y
           CONFIG_PACKAGE_boost-chrono=y
           CONFIG_PACKAGE_boost-random=y
-          CONFIG_PACKAGE_brcmfmac-firmware-43455-sdio=y
-          CONFIG_PACKAGE_brcmfmac-firmware-43455-sdio-rpi-4b=y
           CONFIG_PACKAGE_brcmfmac-firmware-usb=y
           CONFIG_PACKAGE_btrfs-progs=y
           CONFIG_PACKAGE_bzip2=y
@@ -209,6 +207,7 @@ jobs:
           CONFIG_PACKAGE_containerd=y
           CONFIG_PACKAGE_coreutils-nohup=y
           CONFIG_PACKAGE_curl=y
+          CONFIG_PACKAGE_cypress-firmware-43455-sdio=y
           CONFIG_PACKAGE_dbus=y
           CONFIG_PACKAGE_dnsmasq_full_conntrack=y
           CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
