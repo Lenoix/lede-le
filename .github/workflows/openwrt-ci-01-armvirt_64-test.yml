@@ -1,4 +1,4 @@
-#
+ii#
 # This is free software, lisence use MIT.
 # 
 # Copyright (C) 2019 P3TERX <https://p3terx.com>
@@ -13,8 +13,8 @@ on:
   push:
 #    branches:
 #      -master
-  schedule:
-    - cron: 0 20 * * 3
+#  schedule:
+#    - cron: 0 20 * * *
 
 jobs:
 
@@ -224,6 +224,7 @@ jobs:
           CONFIG_PACKAGE_gzip=y
           CONFIG_PACKAGE_haproxy=y
           CONFIG_PACKAGE_hd-idle=y
+          CONFIG_PACKAGE_hostapd-common=y
           CONFIG_PACKAGE_icu=y
           CONFIG_PACKAGE_ip6tables=y
           CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
@@ -551,6 +552,7 @@ jobs:
           CONFIG_PACKAGE_watchcat=y
           CONFIG_PACKAGE_wifischedule=y
           CONFIG_PACKAGE_wireless-regdb=y
+          CONFIG_PACKAGE_wpad-basic=y
           CONFIG_PACKAGE_wsdd2=y
           CONFIG_PACKAGE_xz=y
           CONFIG_PACKAGE_xz-utils=y
@@ -572,6 +574,7 @@ jobs:
           CONFIG_TARGET_EXT4_RESERVED_PCT=0
           CONFIG_TARGET_ROOTFS_EXT4FS=y
           CONFIG_TARGET_ROOTFS_PARTSIZE=512
+          CONFIG_WPA_MSG_MIN_PRIORITY=3
           EOF
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
           # cat >> .config <<EOF
