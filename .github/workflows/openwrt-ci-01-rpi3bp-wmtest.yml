@@ -10,11 +10,11 @@
 name: OpenWrt-CI-01-rpi3bp-wmtest
 
 on:
-#  push:
+  push:
 #    branches:
 #      -master
 #  schedule:
-#    - cron: 30 22 * * *
+#    - cron: 30 15 * * *
 
 jobs:
 
