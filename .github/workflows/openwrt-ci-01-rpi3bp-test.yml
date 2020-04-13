@@ -174,8 +174,6 @@ jobs:
           CONFIG_PACKAGE_TAR_XZ=y
           CONFIG_PACKAGE_acme=y
           CONFIG_PACKAGE_adb=y
-          CONFIG_PACKAGE_alsa-lib=y
-          CONFIG_PACKAGE_alsa-utils=y
           CONFIG_PACKAGE_amule=y
           CONFIG_PACKAGE_aria2=y
           CONFIG_PACKAGE_ariang=y
@@ -191,7 +189,6 @@ jobs:
           CONFIG_PACKAGE_bzip2=y
           CONFIG_PACKAGE_ca-bundle=y
           CONFIG_PACKAGE_cgroupfs-mount=y
-          CONFIG_PACKAGE_confuse=y
           CONFIG_PACKAGE_containerd=y
           # CONFIG_PACKAGE_cypress-firmware-43430-sdio is not set
           # CONFIG_PACKAGE_cypress-firmware-43455-sdio is not set
@@ -203,10 +200,8 @@ jobs:
           CONFIG_PACKAGE_docker-ce=y
           CONFIG_PACKAGE_dynapoint=y
           CONFIG_PACKAGE_fdisk=y
-          CONFIG_PACKAGE_fdk-aac=y
           CONFIG_PACKAGE_file=y
           CONFIG_PACKAGE_flock=y
-          CONFIG_PACKAGE_forked-daapd=y
           CONFIG_PACKAGE_frpc=y
           CONFIG_PACKAGE_frps=y
           CONFIG_PACKAGE_getopt=y
@@ -260,9 +255,7 @@ jobs:
           CONFIG_PACKAGE_kmod-tun=y
           CONFIG_PACKAGE_kmod-usb-printer=y
           CONFIG_PACKAGE_kmod-veth=y
-          CONFIG_PACKAGE_lame-lib=y
           CONFIG_PACKAGE_less=y
-          CONFIG_PACKAGE_libantlr3c=y
           CONFIG_PACKAGE_libattr=y
           CONFIG_PACKAGE_libavahi-client=y
           CONFIG_PACKAGE_libavahi-dbus-support=y
@@ -279,13 +272,10 @@ jobs:
           CONFIG_PACKAGE_libexpat=y
           CONFIG_PACKAGE_libfdisk=y
           CONFIG_PACKAGE_libffi=y
-          CONFIG_PACKAGE_libffmpeg-full=y
           CONFIG_PACKAGE_libfreetype=y
-          CONFIG_PACKAGE_libgcrypt=y
           CONFIG_PACKAGE_libgdbm=y
           CONFIG_PACKAGE_libgmp=y
           CONFIG_PACKAGE_libgnutls=y
-          CONFIG_PACKAGE_libgpg-error=y
           CONFIG_PACKAGE_libiconv-full=y
           CONFIG_PACKAGE_libjpeg=y
           CONFIG_PACKAGE_libltdl=y
@@ -301,13 +291,10 @@ jobs:
           CONFIG_PACKAGE_libnettle=y
           CONFIG_PACKAGE_libnetwork=y
           CONFIG_PACKAGE_libnfnetlink=y
-          CONFIG_PACKAGE_libopus=y
           CONFIG_PACKAGE_libpam=y
           CONFIG_PACKAGE_libpcre2-16=y
-          CONFIG_PACKAGE_libplist=y
           CONFIG_PACKAGE_libpng=y
           CONFIG_PACKAGE_libpopt=y
-          CONFIG_PACKAGE_libprotobuf-c=y
           CONFIG_PACKAGE_libreadline=y
           CONFIG_PACKAGE_libsensors=y
           CONFIG_PACKAGE_libsqlite3=y
@@ -315,7 +302,6 @@ jobs:
           CONFIG_PACKAGE_libtasn1=y
           CONFIG_PACKAGE_libtirpc=y
           CONFIG_PACKAGE_libubox-lua=y
-          CONFIG_PACKAGE_libunistring=y
           CONFIG_PACKAGE_libupnp=y
           CONFIG_PACKAGE_libwebsockets-full=y
           CONFIG_PACKAGE_libwxbase=y
@@ -344,7 +330,6 @@ jobs:
           CONFIG_PACKAGE_luci-app-hd-idle=y
           CONFIG_PACKAGE_luci-app-kodexplorer=y
           CONFIG_PACKAGE_luci-app-lxc=y
-          CONFIG_PACKAGE_luci-app-music-remote-center=y
           CONFIG_PACKAGE_luci-app-mwan3=y
           CONFIG_PACKAGE_luci-app-mwan3helper=y
           CONFIG_PACKAGE_luci-app-netdata=y
@@ -375,7 +360,6 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-haproxy-tcp-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-hd-idle-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-kodexplorer-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-music-remote-center-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-mwan3-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-mwan3helper-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-netdata-zh-cn=y
@@ -410,7 +394,6 @@ jobs:
           CONFIG_PACKAGE_mdadm=y
           CONFIG_PACKAGE_mount-utils=y
           CONFIG_PACKAGE_mwan3=y
-          CONFIG_PACKAGE_mxml=y
           CONFIG_PACKAGE_nano=y
           CONFIG_PACKAGE_netdata=y
           CONFIG_PACKAGE_nginx=y
@@ -496,7 +479,6 @@ jobs:
           CONFIG_PACKAGE_softethervpn5-client=y
           CONFIG_PACKAGE_softethervpn5-libs=y
           CONFIG_PACKAGE_softethervpn5-server=y
-          CONFIG_PACKAGE_sqlite3-cli=y
           CONFIG_PACKAGE_sqm-scripts=y
           CONFIG_PACKAGE_sysfsutils=y
           CONFIG_PACKAGE_tar=y
