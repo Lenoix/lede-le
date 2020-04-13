@@ -10,7 +10,7 @@
 name: OpenWrt-CI-01-rpi3bp-wmtest
 
 on:
-  push:
+#  push:
 #    branches:
 #      -master
 #  schedule:
