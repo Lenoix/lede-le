@@ -9,8 +9,8 @@
 
 name: OpenWrt-CI-01-rpi3bp-test
 
-on:
-  push:
+#on:
+#  push:
 #    branches:
 #      -master
 #  schedule:
