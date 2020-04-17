@@ -10,7 +10,7 @@
 name: OpenWrt-CI-rpi4-wm-test
 
 on:
-  push:
+#  push:
 #    branches:
 #      -master
   schedule:
