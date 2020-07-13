@@ -20,7 +20,7 @@ jobs:
 
   build_openwrt:
 
-    name: Build OpenWrt and release
+    name: Build OpenWrt and release Rpi3 test
     runs-on: ubuntu-18.04
 
     steps:

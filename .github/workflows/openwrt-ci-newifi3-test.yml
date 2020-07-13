@@ -13,14 +13,14 @@ on:
   schedule:
     - cron: 0 20 * * *
   push:
-    tags:
-      - '*'
+    branches:
+      -master
 
 jobs:
 
   build_openwrt:
 
-    name: Build OpenWrt and release
+    name: Build OpenWrt and release NEWIFI3D2 test
     runs-on: ubuntu-18.04
 
     steps:
