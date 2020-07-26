@@ -11,7 +11,7 @@ name: OpenWrt-CI-rpi4-test
 
 on:
   schedule:
-    - cron: 0 16 * * 6
+    - cron: 0 16 * * 7
   push:
     tags:
       - '*'
@@ -21,7 +21,7 @@ jobs:
   build_openwrt:
 
     name: Build OpenWrt and release RPI4 test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
       - name: Checkout
@@ -574,7 +574,7 @@ jobs:
         run: find ./bin/targets/ -type d -name "packages" | xargs rm -rf {}
 
       - name: Upload artifact
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@main
         with:
           name: OpenWrt_firmware
           path: ./bin/targets/

@@ -11,7 +11,7 @@ name: OpenWrt-CI-01-NEWIFI3D2-test
 
 on:
   schedule:
-    - cron: 0 22 * * 6
+    - cron: 0 22 * * 7
   push:
     tags:
       - '*'
@@ -21,7 +21,7 @@ jobs:
   build_openwrt:
 
     name: Build OpenWrt and release NEWIFI3D2 test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
       - name: Checkout
@@ -367,7 +367,7 @@ jobs:
         run: find ./bin/targets/ -type d -name "packages" | xargs rm -rf {}
 
       - name: Upload artifact
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@main
         with:
           name: OpenWrt_firmware
           path: ./bin/targets/
