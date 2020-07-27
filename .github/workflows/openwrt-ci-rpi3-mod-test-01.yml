@@ -11,7 +11,7 @@ name: OpenWrt-CI-01-Rpi3-test
 
 on:
   schedule:
-    - cron: 0 12 * * *
+    - cron: 0 22 * * *
   push:
     tags:
       - '*'
