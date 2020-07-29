@@ -11,7 +11,7 @@ name: OpenWrt-CI-01-Rpi3-test
 
 on:
   schedule:
-    - cron: 0 22 * * *
+    - cron: 0 1 * * *
   push:
     tags:
       - '*'
@@ -568,7 +568,7 @@ jobs:
           CONFIG_SQLITE3_JSON1=y
           CONFIG_SQLITE3_LIBEDIT=y
           CONFIG_SQLITE3_RTREE=y
-          CONFIG_TARGET_ROOTFS_PARTSIZE=512
+          CONFIG_TARGET_ROOTFS_PARTSIZE=1024
           CONFIG_TARGET_ROOTFS_TARGZ=y
           CONFIG_ZSTD_OPTIMIZE_O3=y
           EOF
