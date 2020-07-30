@@ -11,7 +11,7 @@ name: OpenWrt-CI-01-NEWIFI3D2-test
 
 on:
   schedule:
-    - cron: 0 22 * * *
+    - cron: 0 22 * * 3,6
   push:
     tags:
       - '*'
