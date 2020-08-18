@@ -12,6 +12,9 @@ on:
   push:
     branches: 
       - master
+    paths-ignore:
+      - README.md
+      - .github/workflows/openwrt-ci.yml
   schedule:
     - cron: 30 19 * * *
 
