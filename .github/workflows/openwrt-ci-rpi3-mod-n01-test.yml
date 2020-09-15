@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 # 
 
-name: OpenWrt-CI-n01-Rpi3-test
+name: OpenWrt-CI-n01-Rpi3-beta
 
 on:
   schedule:

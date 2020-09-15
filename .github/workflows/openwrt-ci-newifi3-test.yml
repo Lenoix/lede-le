@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 # 
 
-name: OpenWrt-CI-01-NEWIFI3D2-test
+name: OpenWrt-CI-01-NEWIFI3D2-beta
 
 on:
   schedule:
