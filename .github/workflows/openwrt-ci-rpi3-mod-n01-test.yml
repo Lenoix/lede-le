@@ -11,10 +11,10 @@ name: OpenWrt-CI-n01-Rpi3-beta
 
 on:
   schedule:
-    - cron: 0 0 * * *
-  push:
-    branches: 
-      - master
+    - cron: 0 1 * * 2,6
+#  push:
+#    branches: 
+#      - master
 
 jobs:
 
