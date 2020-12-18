@@ -16,7 +16,7 @@ on:
       - README.md
       - .github/workflows/openwrt-ci.yml
   schedule:
-    - cron: 30 19 * * *
+    - cron: 30 20 * * *
 
 jobs:
   merge:
