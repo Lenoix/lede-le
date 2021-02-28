@@ -175,6 +175,7 @@ jobs:
           CONFIG_PACKAGE_collectd-mod-rrdtool=y
           CONFIG_PACKAGE_confuse=y
           CONFIG_PACKAGE_containerd=y
+          CONFIG_PACKAGE_curl=y
           # CONFIG_PACKAGE_cypress-firmware-43430-sdio is not set
           # CONFIG_PACKAGE_cypress-nvram-43430-sdio-rpi-3b is not set
           # CONFIG_PACKAGE_cypress-nvram-43455-sdio-rpi-3b-plus is not set
@@ -351,6 +352,7 @@ jobs:
           CONFIG_PACKAGE_libtirpc=y
           CONFIG_PACKAGE_libunistring=y
           CONFIG_PACKAGE_libupnp=y
+          CONFIG_PACKAGE_libusb-1.0=y
           CONFIG_PACKAGE_libwebp=y
           CONFIG_PACKAGE_libwebsockets-full=y
           CONFIG_PACKAGE_libwolfssl=m
@@ -490,6 +492,9 @@ jobs:
           CONFIG_PACKAGE_odhcpd-ipv6only=y
           CONFIG_PACKAGE_odhcpd_ipv6only_ext_cer_id=0
           CONFIG_PACKAGE_oniguruma=y
+          CONFIG_PACKAGE_openssh-keygen=y
+          CONFIG_PACKAGE_openssh-server-pam=y
+          CONFIG_PACKAGE_openssh-sftp-server=y
           CONFIG_PACKAGE_openvpn-easy-rsa=y
           CONFIG_PACKAGE_openvpn-openssl=y
           CONFIG_PACKAGE_p910nd=y
@@ -547,9 +552,12 @@ jobs:
           CONFIG_PACKAGE_redsocks2=y
           CONFIG_PACKAGE_rpcd-mod-lxc=y
           CONFIG_PACKAGE_rrdtool1=y
+          CONFIG_PACKAGE_rsync=y
+          CONFIG_PACKAGE_rsyncd=y
           CONFIG_PACKAGE_runc=y
           CONFIG_PACKAGE_samba4-libs=y
           CONFIG_PACKAGE_samba4-server=y
+          CONFIG_PACKAGE_screen=y
           CONFIG_PACKAGE_shadowsocks-libev-config=y
           CONFIG_PACKAGE_shairplay=y
           CONFIG_PACKAGE_shairport-sync-openssl=y
@@ -559,6 +567,7 @@ jobs:
           CONFIG_PACKAGE_softethervpn5-libs=y
           CONFIG_PACKAGE_softethervpn5-server=y
           CONFIG_PACKAGE_sqlite3-cli=y
+          CONFIG_PACKAGE_syncthing=y
           CONFIG_PACKAGE_sysfsutils=y
           CONFIG_PACKAGE_tar=y
           CONFIG_PACKAGE_tc=y
@@ -575,6 +584,9 @@ jobs:
           CONFIG_PACKAGE_uclibcxx=y
           CONFIG_PACKAGE_unzip=y
           CONFIG_PACKAGE_urngd=y
+          CONFIG_PACKAGE_usb-modeswitch=y
+          CONFIG_PACKAGE_usbreset=y
+          CONFIG_PACKAGE_usbutils=y
           CONFIG_PACKAGE_v2ray-plugin=y
           CONFIG_PACKAGE_vim-fuller=y
           CONFIG_PACKAGE_watchcat=y
@@ -589,6 +601,7 @@ jobs:
           CONFIG_PACKAGE_xz-utils=y
           CONFIG_PACKAGE_zerotier=y
           CONFIG_PACKAGE_zoneinfo-asia=y
+          CONFIG_RSYNC_zlib=y
           CONFIG_SAMBA4_SERVER_AVAHI=y
           CONFIG_SAMBA4_SERVER_NETBIOS=y
           CONFIG_SAMBA4_SERVER_VFS=y
