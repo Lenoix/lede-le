@@ -309,7 +309,6 @@ jobs:
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
-          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
           CONFIG_PACKAGE_luci-app-tinyproxy=y
           CONFIG_PACKAGE_luci-app-transmission=y
           CONFIG_PACKAGE_luci-app-travelmate=y
@@ -482,7 +481,6 @@ jobs:
           CONFIG_PACKAGE_usbutils=y
           CONFIG_PACKAGE_uuidd=y
           CONFIG_PACKAGE_uuidgen=y
-          CONFIG_PACKAGE_v2ray-plugin=y
           CONFIG_PACKAGE_vim-fuller=y
           CONFIG_PACKAGE_whereis=y
           CONFIG_PACKAGE_which=y
